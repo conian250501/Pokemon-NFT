@@ -1,0 +1,29 @@
+.poke {
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    padding: 0 5.6rem;
+    padding-top: 18rem;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and(max-width:767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__list {
+    position: relative;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // width: 360px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+}

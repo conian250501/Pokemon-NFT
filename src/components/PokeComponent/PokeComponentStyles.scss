@@ -1,0 +1,63 @@
+.poke {
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: scale(1.2);
+        transition: all 0.22s ease-out;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      height: 150px;
+      width: 100%;
+    }
+  }
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.22s ease-out;
+  }
+  &__description {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #888;
+  }
+  &__name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+  }
+  &__type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    color: #fff;
+    .type {
+      font-size: 1.2rem;
+      padding: 0.4rem 1rem;
+      background-color: var(--waterColor);
+      border-radius: 4px;
+      &:last-child {
+        margin-left: 1rem;
+      }
+      &.color1 {
+        background-color: var(--fireColor);
+      }
+    }
+  }
+}

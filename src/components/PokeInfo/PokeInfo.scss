@@ -1,0 +1,226 @@
+.pokeinfo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200000000;
+  &__overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200000000;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  &__container {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    padding-top: 8rem;
+    z-index: 2;
+    animation: fadeOut 0.25s linear;
+  }
+  &__image {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 160px;
+    height: 160px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    @media screen and (max-width: 767px) {
+      top: 16px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+  &__body {
+    flex: 1;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    width: 400px;
+    height: fit-content;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    // overflow: scroll;
+    @media screen and (max-width: 767px) {
+      width: 400px;
+    }
+  }
+
+  &__back {
+    .icon__back {
+      font-size: 3rem;
+      color: var(--whiteColor);
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #777;
+  }
+  &__name {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  &__types {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      padding: 0.6rem 1.8rem;
+      border-radius: 0.4rem;
+      color: var(--whiteColor);
+    }
+    .types:first-child {
+      background-color: var(--fireColor);
+    }
+    .types:last-child {
+      background-color: var(--flyingColor);
+      margin-left: 1.2rem;
+    }
+  }
+  &__measure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    span {
+      padding: 1rem 5rem;
+      border-radius: 40rem;
+      background-color: var(--bgLightColor);
+    }
+  }
+
+  &__abilities {
+    margin-top: 3rem;
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .list {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 1.4rem;
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 40rem;
+        background-color: var(--bgLightColor);
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-left: 1.6rem;
+        }
+      }
+    }
+  }
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  &__evolution {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    .evolution__tilte {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-weight: 700;
+      border-radius: 40rem;
+      cursor: pointer;
+      background-color: var(--bgLightColor);
+    }
+  }
+}
+.stats {
+  &__content {
+    // box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    background: var(--bgLightColor);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.6rem 0.8rem;
+    border-radius: 30px;
+    margin: 5px;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    background-color: var(--fireColor);
+    border-radius: 100rem;
+    &.color {
+      background-color: var(--flyingColor);
+    }
+    &.color1 {
+      background-color: var(--flyingColor);
+    }
+    &.color2 {
+      background-color: var(--electricColor);
+    }
+    &.color3 {
+      background-color: var(--groundColor);
+    }
+    &.color4 {
+      background-color: var(--fightingColor);
+    }
+    &.color5 {
+      background-color: var(--normalColor);
+    }
+  }
+  &__number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateX(300px);
+    // opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    // opacity: 1;
+  }
+}

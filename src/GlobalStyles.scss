@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100;300;500;600;700;800;900&display=swap");
+
+:root {
+  --primaryColor: rgb(255, 242, 0);
+  --posionColor: #ab549a;
+  --grassColor: #78cd54;
+  --fireColor: #ff421c;
+  --flyingColor: #669aff;
+  --waterColor: #2f9aff;
+  --BugColor: #abbc1c;
+  --normalColor: #bcbcac;
+  --electricColor: #ffcd30;
+  --groundColor: #debc54;
+  --fairyColor: #ffacff;
+  --fightingColor: #bc5442;
+  --psychicColor: #ff549a;
+  --iceColor: #78deff;
+
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --backgroundColor: #333;
+  --bgLightColor: #f6f8fc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  width: 1440px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #333;
+}

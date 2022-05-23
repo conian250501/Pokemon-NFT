@@ -1,0 +1,21 @@
+.poke__load {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 2rem 4.5rem;
+  margin: 3rem 0;
+  border-radius: 8px;
+  border: 2px solid var(--primaryColor);
+  background-color: transparent;
+  transition: all 0.22s linear;
+
+  cursor: pointer;
+  &:hover {
+    color: #000;
+    background-color: var(--primaryColor);
+    transition: all 0.22s linear;
+  }
+}
